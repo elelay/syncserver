@@ -115,11 +115,11 @@ files modified but not mandatory:
 # Configuring firefox:
 - goto about:config
    - services.sync.tokenServerURI = http://127.0.0.1:5000/token/1.0/sync/1.5  
-  - identity.fxaccounts.settings.uri = https://localhost:3030/settings  
-  - identity.fxaccounts.remote.signup.uri = https://localhost:3030/signup?service=sync&context=fx_desktop_v1   
-  - identity.fxaccounts.remote.signin.uri = https://localhost:3030/signin?service=sync&context=fx_desktop_v1  
-  - identity.fxaccounts.remote.force_auth.uri = https://localhost:3030/force_auth?service=sync&context=fx_desktop_v1  
-  - identity.fxaccounts.auth.uri = https://localhost:9000/v1  
+   - identity.fxaccounts.settings.uri = https://localhost:3030/settings  
+   - identity.fxaccounts.remote.signup.uri = https://localhost:3030/signup?service=sync&context=fx_desktop_v1   
+   - identity.fxaccounts.remote.signin.uri = https://localhost:3030/signin?service=sync&context=fx_desktop_v1  
+   - identity.fxaccounts.remote.force_auth.uri = https://localhost:3030/force_auth?service=sync&context=fx_desktop_v1  
+   - identity.fxaccounts.auth.uri = https://localhost:9000/v1  
 
  - about:accounts  
     tutu@me.com  
