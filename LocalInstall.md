@@ -7,9 +7,12 @@ configuration.
 ## debian
 update to jessie
 
-install libgmp-dev, git, curl, nodejs, nodejs-legacy, python, g++
+install libgmp-dev, git, curl, nodejs, nodejs-legacy, python, g++, bzip2
 
     curl https://www.npmjs.org/install.sh | sh
+
+    npm install -g grunt-cli
+    npm install -g phantomjs
 
 (incomplete)
 
@@ -23,11 +26,10 @@ install nodejs
 
     git clone git://github.com/elelay/fxa-auth-server.git
     cd fxa-auth-server
-    fxa-auth-server ❯ git checkout -b runlocal
+    fxa-auth-server ❯ git checkout -b runlocal origin/runlocal
     fxa-auth-server ❯ npm install
     fxa-auth-server ❯ npm start
-    Ctrl-C
-    fxa-auth-server ❯ npm test
+    (fails missing key.pem) 
 
 
 # Generating ssl certificate/key
@@ -51,6 +53,8 @@ See http://nodejs.org/api/tls.html
 
     fxa-auth-server ❯ openssl x509 -req -in csr.pem -signkey key.pem -out cert.pem
 
+    fxa-auth-server ❯ npm start
+    Ctrl-C
 
 
 
@@ -70,9 +74,12 @@ See http://nodejs.org/api/tls.html
 
     git clone git://github.com/elelay/fxa-content-server.git
     cd fxa-content-server
-    fxa-content-server ❯ git checkout -b runlocal
-    fxa-content-server ❯ cp server/config/local.json-dist server/config/local.json
+    fxa-content-server ❯ git checkout -b runlocal origin/runlocal
+    (already configured
+    fxa-content-server ❯ cp server/config/local.json-dist server/config/local.json)
     fxa-content-server ❯ npm install
+    fxa-content-server ❯ cp ../fxa-auth-server/key.pem .
+    fxa-content-server ❯ cp ../fxa-auth-server/cert.pem .
     fxa-content-server ❯ npm start
     Ctrl-C
     fxa-content-server ❯ npm stop
