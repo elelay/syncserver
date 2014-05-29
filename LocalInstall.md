@@ -103,7 +103,7 @@ new firefox profile:
 # Installing/Configuring syncserver
     tmp_mzsync ❯ git clone git://github.com/elelay/syncserver.git
     tmp_mzsync ❯ cd syncserver
-    syncserver ❯ git checkout -b runlocal
+    syncserver ❯ git checkout -b runlocal origin/runlocal
     syncserver ❯ make build
     syncserver ❯ make test
     syncserver ❯ make serve
